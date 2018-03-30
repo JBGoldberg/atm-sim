@@ -1,0 +1,31 @@
+{
+  "name": "atm-sim",
+  "version": "1.0.0",
+  "description": "Demo simulating ATM interaction",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha ",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/jbgoldberg/atm-sim.git"
+  },
+  "keywords": [
+    "simulation",
+    "atm",
+    "demo",
+    "node",
+    "angular"
+  ],
+  "author": "Jim Bruno Goldberg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/jbgoldberg/atm-sim/issues"
+  },
+  "homepage": "https://gitlab.com/jbgoldberg/atm-sim#README",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3"
+  }
+}
