@@ -20,10 +20,7 @@ describe("ATM", function () {
       .get('/api/atm')
       .end((err, res) => {
         if (err) console.log(err);
-
-        console.log("Res:", res.body);
         
-
         res.should.have.status(201);
         res.body.status.should.be.eq("waiting-for-requests");
         done();

@@ -20,7 +20,7 @@ app.use(bodyParser.json({
 app.use('/', express.static('webclient'));
 
 // *** main routes *** //
-const atmRoutes = require('./api/atm.js');
+const atmRoutes = require('./api');
 app.use('/api/', atmRoutes);
 
 // production error handler
