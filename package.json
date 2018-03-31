@@ -4,7 +4,7 @@
   "description": "Demo simulating ATM interaction",
   "main": "server.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha  api/test --timeout 10000",
+    "test": "./node_modules/.bin/mocha api/test --timeout 10000 --reporter spec --exit",
     "start": "node server.js"
   },
   "repository": {
