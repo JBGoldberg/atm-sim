@@ -33,8 +33,9 @@ app.use(function(err, req, res, next) {
   return;
 });
 
-let server = app.listen(SERVER_PORT, () => {
+
+app.listen(SERVER_PORT, () => {
   console.log(`My API is running... on ${SERVER_PORT}`);
 });
 
-module.exports = server;
+module.exports = app;

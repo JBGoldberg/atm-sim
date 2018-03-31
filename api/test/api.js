@@ -1,19 +1,11 @@
 let chai = require('chai');
 let chaiHttp = require('chai-http');
 let should = chai.should();
+chai.use(chaiHttp);
 
 let server = require('../../server');
 
-chai.use(chaiHttp);
-
-
-describe("ATM", function () {
-
-  // Clean enviroment before finish the test batch
-  after(function (done) {
-    server.close();
-    done();
-  });
+xdescribe("API", function () {
 
   it("should be reachable", (done) => {
     chai.request(server)
