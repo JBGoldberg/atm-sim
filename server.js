@@ -17,7 +17,7 @@ app.use(bodyParser.json({
   type: 'application/json'
 }));
 
-app.use('/', express.static('webclient'));
+app.use('/', express.static('webclient/dist'));
 
 // *** main routes *** //
 const atmRoutes = require('./api');
@@ -32,7 +32,6 @@ app.use(function(err, req, res, next) {
   });
   return;
 });
-
 
 app.listen(SERVER_PORT, () => {
   console.log(`My API is running... on ${SERVER_PORT}`);
