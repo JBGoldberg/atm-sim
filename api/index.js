@@ -2,19 +2,55 @@
 const express = require('express');
 const router = express.Router();
 
-const OBJECT_NAME = "ATM";
+const converter = require('./helper/convertions');
 
-const atm = require('./models/atm')
+const Atm = require('./models/atm')
+var atm = new Atm();
 
-checkStatus = function(req, res) {
+const checkStatus = function (req, res) {
 
-    console.info(`${OBJECT_NAME}: Check status`);
+  console.info(`Operation: Check status`);
 
-    return res.status(201).json({
-      status: "waiting-for-requests"
-    });
+  return res.status(201).json({
+    status: "waiting-for-requests"
+  });
 }
 
-router.get("/atm/",checkStatus);
+const atmWithdraw = function (req, res) {
+
+  console.info(`Operation: Withdraw`, req.query.amount);
+
+  let money;
+  try {
+
+    let _amount = parseInt(req.query.amount);
+    money = atm.withdraw(_amount);
+
+  } catch (exception) {
+
+    let errorCode =  500;
+    switch(exception) {
+      case 'NoteUnavailableException':
+      errorCode = 406;
+      break;
+
+      case 'InvalidArgumentException':
+      errorCode = 400;
+      break;
+    }
+
+    return res.status(errorCode).json({
+      exception: exception
+    });
+  }
+
+  return res.status(201).json({
+    money: converter.map2json(money)
+  });
+}
+
+router.get("/atm/", checkStatus);
+
+router.get("/atm/withdraw", atmWithdraw);
 
 module.exports = router
