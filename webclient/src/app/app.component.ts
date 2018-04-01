@@ -39,20 +39,16 @@ export class AppComponent {
 
     this.atmService.withdraw(this.amount).subscribe(
       _result => {
-
         this.modalService.open(DispenserComponent)
           .componentInstance.withdraw = _result
-
         this.amount = 0
-        
+
       },
       _error => {
-
         switch (_error.error.exception) {
           case 'NoteUnavailableException':
             this.modalService.open(ErrorComponent)
               .componentInstance.message = 'There is no notes in the ATM to fullfil your request!'
-
             break;
 
           case 'InvalidArgumentException':
@@ -67,7 +63,6 @@ export class AppComponent {
       }
     )
   }
-
 }
 
 
