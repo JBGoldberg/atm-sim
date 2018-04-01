@@ -1,5 +1,7 @@
 .display {
-  font-size: 36px;
+  font-size: 56px;
   font-style: italic;
-  margin: 0px 10px 10px 10px;
+  margin: 10px 190px 20px 210px;
+  background-color: darkgray;
+  color: black;
 }
