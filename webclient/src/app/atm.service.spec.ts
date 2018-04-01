@@ -1,6 +1,7 @@
 import { TestBed, inject } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 
+import { environment } from '../environments/environment';
 
 import { AtmService } from './atm.service';
 
@@ -45,7 +46,7 @@ describe('AtmService', () => {
     });
 
     // Execute the calls into Http mock
-    let call = httpMock.expectOne('/api/atm/withdraw?amount=30');
+    let call = httpMock.expectOne(`${environment.api}/api/atm/withdraw?amount=30`);
     expect(call.request.method).toBe('GET');
     expect(call.request.params.get('amount')).toEqual('30');
     call.flush(expectedResponse);
@@ -66,7 +67,7 @@ describe('AtmService', () => {
     });
 
     // Execute the calls into Http mock
-    let call = httpMock.expectOne('/api/atm/withdraw?amount=80');
+    let call = httpMock.expectOne(`${environment.api}/api/atm/withdraw?amount=80`);
     expect(call.request.method).toBe('GET');
     expect(call.request.params.get('amount')).toEqual('80');
     call.flush(expectedResponse);
@@ -84,7 +85,7 @@ describe('AtmService', () => {
     });
 
     // Execute the calls into Http mock
-    let call = httpMock.expectOne('/api/atm/withdraw?amount=125');
+    let call = httpMock.expectOne(`${environment.api}/api/atm/withdraw?amount=125`);
     expect(call.request.method).toBe('GET');
     expect(call.request.params.get('amount')).toEqual('125');
     call.flush(expectedResponse);
@@ -102,7 +103,7 @@ describe('AtmService', () => {
     });
 
     // Execute the calls into Http mock
-    let call = httpMock.expectOne('/api/atm/withdraw?amount=125');
+    let call = httpMock.expectOne(`${environment.api}/api/atm/withdraw?amount=125`);
     expect(call.request.method).toBe('GET');
     expect(call.request.params.get('amount')).toEqual('125');
     call.flush(expectedResponse);
@@ -120,7 +121,7 @@ describe('AtmService', () => {
     });
 
     // Execute the calls into Http mock
-    let call = httpMock.expectOne('/api/atm/withdraw?amount=-130');
+    let call = httpMock.expectOne(`${environment.api}/api/atm/withdraw?amount=-130`);
     expect(call.request.method).toBe('GET');
     expect(call.request.params.get('amount')).toEqual('-130');
     call.flush(expectedResponse);
@@ -143,7 +144,7 @@ describe('AtmService', () => {
     });
 
     // Execute the calls into Http mock
-    let call = httpMock.expectOne('/api/atm/withdraw?amount=null');
+    let call = httpMock.expectOne(`${environment.api}/api/atm/withdraw?amount=null`);
     expect(call.request.method).toBe('GET');
     expect(call.request.params.get('amount')).toEqual('null');
     call.flush(expectedResponse);

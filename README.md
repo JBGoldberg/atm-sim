@@ -64,3 +64,21 @@ Once installed and build, there is only one step to run the system:
 ** Made using Angular 5 and Angular/CLI;
 ** The tests use *jasmine*;
 ** A AtmService is implemented to handle the API, lowering the coupling from the rest of the system;
+
+## Security
+
+Security was not a concern for this project.
+
+## Limitations and Enhanceability
+
+There a lot of things that can be done to superpass the current limitations of this project. Some are:
+
+1. API:
+1.1. Implement a CORS restriction for access to API;
+1.2. Extract definition os kind of notes to outside of model;
+1.3. Create and persist log of operations;
+
+2. Webclient:
+2.1. Create animations to notes and errors;
+2.2. Improve the skin and colors;
+2.3. Change dependency of tests to PhantomJS, instead of Chrome;
