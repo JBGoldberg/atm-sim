@@ -5,11 +5,15 @@ import { HttpClient } from '@angular/common/http';
 import { AtmService } from './atm.service';
 
 import { AppComponent } from './app.component';
+import { KeyboardComponent } from './keyboard/keyboard.component';
+import { DispenserComponent } from './dispenser/dispenser.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    KeyboardComponent,
+    DispenserComponent
   ],
   imports: [
     BrowserModule
