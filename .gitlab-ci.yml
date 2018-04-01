@@ -13,11 +13,18 @@ image: node:latest
 cache:
   paths:
   - node_modules/
+  - webclient/node_modules/
 
 test_api:
   script:
    - npm install
    - npm test
+
+test_webclient:
+  script:
+   - cd webclient
+   - npm install
+   - npm test   
 
 #test_db:
 #  script:
