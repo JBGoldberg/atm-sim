@@ -9,8 +9,9 @@
   </div>
   
   <div>
-    <atm-keyboard></atm-keyboard>
+    <atm-keyboard (onEvent)="onKeyboardPress($event)"></atm-keyboard>
   </div>
+
 
   <div>
     <atm-dispenser></atm-dispenser>

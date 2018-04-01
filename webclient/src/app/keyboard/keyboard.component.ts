@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'atm-keyboard',
@@ -7,9 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KeyboardComponent implements OnInit {
 
+  @Output() onEvent = new EventEmitter<number>()
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onClick(key: number): void {
+    // Number signal
+    this.onEvent.emit(key)
+  }
+
+  onClear(): void {
+    // Reset signal
+    this.onEvent.emit(-2)
+  }
+
+  onWithdraw(): void {
+    // Withdraw signal
+    this.onEvent.emit(-1)
   }
 
 }

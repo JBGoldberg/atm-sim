@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   amount = 123;
+
+  onKeyboardPress($signal: number): void {
+
+    console.log("Signal:", $signal)
+  
+  }
 }

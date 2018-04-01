@@ -1,3 +1,50 @@
-<p>
-  keyboard works!
-</p>
+<div class="keyboard">
+  <div class="row">
+    <div class="col">
+      <button class="btn btn-primary btn-block" (click)="onClick(7)">7</button>
+    </div>
+    <div class="col">
+      <button class="btn btn-primary btn-block" (click)="onClick(8)">8</button>
+    </div>
+    <div class="col">
+      <button class="btn btn-primary btn-block" (click)="onClick(9)">9</button>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col">
+      <button class="btn btn-primary btn-block" (click)="onClick(4)">4</button>
+    </div>
+    <div class="col">
+      <button class="btn btn-primary btn-block" (click)="onClick(5)">5</button>
+    </div>
+    <div class="col">
+      <button class="btn btn-primary btn-block" (click)="onClick(6)">6</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <button class="btn btn-primary btn-block" (click)="onClick(1)">1</button>
+    </div>
+    <div class="col">
+      <button class="btn btn-primary btn-block" (click)="onClick(2)">2</button>
+    </div>
+    <div class="col">
+      <button class="btn btn-primary btn-block" (click)="onClick(3)">3</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <button class="btn btn-success btn-block" (click)="onWithdraw()">Withdraw</button>
+    </div>
+    <div class="col">
+      <button class="btn btn-primary btn-block" (click)="onClick(0)">0</button>
+    </div>
+    <div class="col">
+      <button class="btn btn-danger btn-block" (click)="onClear(7)">Clear</button>
+    </div>
+  </div>
+</div>
