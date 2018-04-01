@@ -28,10 +28,10 @@ describe("API", function () {
         
         res.should.have.status(201);
         res.body.should.have.property('money');
-        res.body.money["10"].should.be.eq(1);
-        res.body.money["20"].should.be.eq(1);
-        res.body.money["50"].should.be.eq(0);
-        res.body.money["100"].should.be.eq(0);
+        res.body.money["notes-10"].should.be.eq(1);
+        res.body.money["notes-20"].should.be.eq(1);
+        res.body.money["notes-50"].should.be.eq(0);
+        res.body.money["notes-100"].should.be.eq(0);
         done();
       });
   });
@@ -44,10 +44,10 @@ describe("API", function () {
         
         res.should.have.status(201);
         res.body.should.have.property('money');
-        res.body.money["10"].should.be.eq(1);
-        res.body.money["20"].should.be.eq(1);
-        res.body.money["50"].should.be.eq(1);
-        res.body.money["100"].should.be.eq(0);
+        res.body.money["notes-10"].should.be.eq(1);
+        res.body.money["notes-20"].should.be.eq(1);
+        res.body.money["notes-50"].should.be.eq(1);
+        res.body.money["notes-100"].should.be.eq(0);
         done();
       });
   });

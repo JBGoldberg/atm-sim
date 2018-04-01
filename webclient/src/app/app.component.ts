@@ -41,7 +41,7 @@ export class AppComponent {
       _result => {
 
         this.modalService.open(DispenserComponent)
-          .componentInstance.money = _result
+          .componentInstance.withdraw = _result
 
         this.amount = 0
         
@@ -68,17 +68,6 @@ export class AppComponent {
     )
   }
 
-  open(signal) {
-    this.modalService.open(signal).result.then((result) => {
-      // this.closeResult = `Closed with: ${result}`;
-      console.log("Inside modal open function")
-
-    }, (reason) => {
-      // this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-
-      console.log("Inside reason callback")
-    });
-  }
 }
 
 

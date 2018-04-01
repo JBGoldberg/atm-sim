@@ -18,11 +18,11 @@ describe("ATM", function () {
   it("should be capable to withdraw 30 in lowest number of notes", () => {
 
     let myNotes = atm.withdraw(30)
-
-    myNotes.get(100).should.be.eq(0);
-    myNotes.get(50).should.be.eq(0);
-    myNotes.get(20).should.be.eq(1);
-    myNotes.get(10).should.be.eq(1);
+    
+    myNotes.get("notes-100").should.be.eq(0);
+    myNotes.get("notes-50").should.be.eq(0);
+    myNotes.get("notes-20").should.be.eq(1);
+    myNotes.get("notes-10").should.be.eq(1);
     
   });
 
@@ -30,10 +30,10 @@ describe("ATM", function () {
 
     let myNotes = atm.withdraw(80)
 
-    myNotes.get(100).should.be.eq(0);
-    myNotes.get(50).should.be.eq(1);
-    myNotes.get(20).should.be.eq(1);
-    myNotes.get(10).should.be.eq(1);
+    myNotes.get("notes-100").should.be.eq(0);
+    myNotes.get("notes-50").should.be.eq(1);
+    myNotes.get("notes-20").should.be.eq(1);
+    myNotes.get("notes-10").should.be.eq(1);
     
   });
   

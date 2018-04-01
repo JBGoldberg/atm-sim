@@ -26,7 +26,7 @@ class Atm {
 
         let quantity = parseInt($amount / this.notes[_pointer]);
         $amount -= this.notes[_pointer] * quantity;
-        money.set(this.notes[_pointer], quantity)
+        money.set("notes-"+this.notes[_pointer], quantity)
 
       }
 
