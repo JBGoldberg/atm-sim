@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AtmService } from './atm.service';
 
@@ -16,9 +16,10 @@ import { DispenserComponent } from './dispenser/dispenser.component';
     DispenserComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [AtmService, HttpClient],
+  providers: [AtmService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
